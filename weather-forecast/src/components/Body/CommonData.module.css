@@ -1,0 +1,35 @@
+.leftside h2 {
+  margin: 0;
+}
+
+.rightside {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.rightside p {
+  font-size: 24px;
+}
+
+.rightside .temperature {
+  font-size: 64px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.feelsLike {
+  font-weight: 900;
+}
+
+.temperature span {
+  font-weight: 400;
+}
+
+.leftside {
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.leftside p {
+  font-weight: 500;
+}

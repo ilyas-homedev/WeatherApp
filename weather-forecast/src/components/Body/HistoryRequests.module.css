@@ -1,0 +1,22 @@
+.historyList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style-type: none;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #2e2e2e;
+  font-weight: 500;
+}
+
+li:hover {
+  color: #8094bf;
+}
+
+.setBg {
+  background-color: rgba(204, 204, 204, .5);
+}

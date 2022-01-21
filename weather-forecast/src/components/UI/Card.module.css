@@ -1,0 +1,10 @@
+.card {
+  padding: 10px;
+  margin: 10px 0;
+  border: 4px solid #2e2e2e;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

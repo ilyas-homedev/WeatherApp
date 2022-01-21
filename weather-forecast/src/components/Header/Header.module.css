@@ -1,0 +1,45 @@
+.headerContainer {
+  width: 100%;
+  background-color: rgba(204, 204, 204, .5);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  border-bottom: 1px solid #2e2e2e;
+  color: #2e2e2e;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+}
+
+button:hover,
+button:active {
+  background-color: #8094bf;
+  color: #fff;
+}
+
+.headerContainer h1 {
+  margin: 0;
+  color: #2e2e2e;
+  font-size: 28px;
+  color: #8094bf;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.control input{
+  font-size: 18px;
+  padding: 4px;
+  border: none;
+  border-bottom: 1px solid #2e2e2e;
+  outline: none;
+}
