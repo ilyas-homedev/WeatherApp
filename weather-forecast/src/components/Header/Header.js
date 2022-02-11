@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import classes from './Header.module.css';
 
 function Header(props) {
@@ -32,4 +32,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default React.memo(Header);

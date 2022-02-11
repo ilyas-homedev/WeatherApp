@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './HistoryRequests.module.css';
 import Card from '../UI/Card';
 
@@ -16,4 +17,4 @@ function HistoryRequests(props) {
   );
 };
 
-export default HistoryRequests;
+export default React.memo(HistoryRequests);

@@ -4,7 +4,6 @@ import classes from './App.module.css';
 import Header from './components/Header/Header';
 import HistoryRequests from './components/Body/HistoryRequests';
 import CommonData from './components/Body/CommonData';
-import Details from './components/Body/Details';
 import Loading from './components/UI/Loading';
 
 function App() {
@@ -14,6 +13,15 @@ function App() {
   const [cityInformation, setCityInformation] = useState(null);
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const addToHistory = (cityName) => {
+    const editedName = cityName.split(' ').map(word => word.charAt(0) + word.slice(1)).join(' ');
+    if (historyRequests.includes(editedName)) {
+      return;
+    };
+    setHistoryRequests([...historyRequests, editedName]);
+    setIsHistoryExists(true);
+  };
 
   const citySearch = async (cityName) => {
     setIsLoading(true);
@@ -32,18 +40,10 @@ function App() {
       addToHistory(data.name);
       setError(false);
       setIsLoading(false);
+      console.log(data);
     } catch (error) {
       setError(true);
     };
-  };
-
-  const addToHistory = (cityName) => {
-    const editedName = cityName.split(' ').map(word => word.charAt(0) + word.slice(1)).join(' ');
-    if (historyRequests.includes(editedName)) {
-      return;
-    };
-    setHistoryRequests([...historyRequests, editedName]);
-    setIsHistoryExists(true);
   };
 
   return (
@@ -51,10 +51,7 @@ function App() {
       <Header onSearch={citySearch}/>
       {isLoading && <Loading />}
       {isHistoryExists && <HistoryRequests requests={historyRequests} onSearch={citySearch}/>}
-      { cityInformation && <div>
-        <CommonData cityData={cityInformation} className={classes.dataAndDetails}/>
-        <Details cityData={cityInformation} className={classes.dataAndDetails}/>
-      </div> }
+      { cityInformation && <CommonData cityData={cityInformation} className={classes.commonData} cardStyles={classes.cardStyles}/>}
       { error && <div className={classes.error}><p>Something went wrong. Please try again.</p></div> }
     </React.Fragment>
   );

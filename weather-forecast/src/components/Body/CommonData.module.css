@@ -1,3 +1,4 @@
+/* COMMON DATA */
 .leftside h2 {
   margin: 0;
 }
@@ -12,6 +13,12 @@
 }
 
 .rightside .temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightside .temperature p {
   font-size: 64px;
   font-weight: 900;
   margin: 0;
@@ -32,4 +39,78 @@
 
 .leftside p {
   font-weight: 500;
+}
+
+.leftside .coords p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* DETAILS DATA */
+.detailsData {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.detailsCoords {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.detailsData p {
+  margin: 3px 10%;
+}
+
+.detailsCoords p {
+  margin: 3px 10%;
+}
+
+.detailsData p:nth-of-type(1) {
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .rightside .temperature p {
+    font-size: 40px;
+  }
+
+  .leftside {
+    text-align: center;
+  }
+
+  .leftside h2 {
+    font-size: 40px;
+  }
+
+  .leftside p {
+    font-size: 24px;
+  }
+
+  .detailsData {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detailsData p:nth-of-type(1) {
+    order: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .rightside .temperature {
+    flex-direction: column;
+  }
+
+  .rightside .temperature img {
+    width: 40%;
+  }
+
+  .detailsData {
+    grid-template-columns: 1fr;
+    padding-left: 10%;
+  }
+
+  .detailsCoords {
+    grid-template-columns: 1fr;
+    padding-left: 10%;
+  }
 }

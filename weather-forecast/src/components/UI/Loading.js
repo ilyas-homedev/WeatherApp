@@ -1,7 +1,7 @@
 import classes from './Loading.module.css';
 
 function Loading() {
-  console.log('LOADING component');
+  // console.log('LOADING component');
   return (
     <div className={classes.loading}>
       <div className={classes.square}>

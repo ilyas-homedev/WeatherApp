@@ -1,6 +1,18 @@
-.dataAndDetails {
+.commonData {
   display: flex;
   justify-content: space-between;
+}
+
+.cardStyles {
+  background-color: #4c84d4;
+  opacity: .85;
+  color: #fff;
+}
+
+.details {
+  background-color: #4c84d4;
+  opacity: .85;
+  color: #fff;
 }
 
 .error {
@@ -19,4 +31,10 @@
 .error p {
   margin: 0;
   color: #ff1414;
+}
+
+@media (max-width: 768px) {
+  .commonData {
+    flex-direction: column;
+  }
 }
