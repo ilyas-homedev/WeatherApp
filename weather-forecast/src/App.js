@@ -46,13 +46,17 @@ function App() {
     };
   };
 
+  const errorCloseHandler = () => {
+    setError(false);
+  };
+
   return (
     <React.Fragment>
       <Header onSearch={citySearch}/>
       {isLoading && <Loading />}
+      { error && <div className={classes.error}><p>Error! Something went wrong. Please try again. <span onClick={errorCloseHandler}>&times;</span></p></div> }
       {isHistoryExists && <HistoryRequests requests={historyRequests} onSearch={citySearch}/>}
       { cityInformation && <CommonData cityData={cityInformation} className={classes.commonData} cardStyles={classes.cardStyles}/>}
-      { error && <div className={classes.error}><p>Something went wrong. Please try again.</p></div> }
     </React.Fragment>
   );
 }

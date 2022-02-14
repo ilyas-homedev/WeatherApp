@@ -4,6 +4,7 @@
 }
 
 .cardStyles {
+  position: relative;
   background-color: #4c84d4;
   opacity: .85;
   color: #fff;
@@ -21,11 +22,16 @@
   padding: 10px;
   background-color: #ffadad;
   border: 2px solid #d13f3f;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.error span {
+  float: right;
+  cursor: pointer;
 }
 
 .error p {

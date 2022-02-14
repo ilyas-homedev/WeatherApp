@@ -27,6 +27,11 @@ function CommonData(props) {
 
   return (
     <Card className={props.cardStyles}>
+      <div className={classes.tempBtns}>
+        <button>&#176;C</button>
+        <button>&#176;F</button>
+      </div>
+
       <div className={props.className}>
         <div className={classes.leftside}>
           <h2>{name}</h2>

@@ -21,7 +21,7 @@ function Header(props) {
 
   return (
     <div className={classes.headerContainer}>
-      <h1>Weather App</h1>
+      <h1>Weather Today</h1>
       <form onSubmit={submitHandler}>
         <div className={classes.control}>
           <input type="text" placeholder={placeholder} ref={inputRef}/>
@@ -32,4 +32,4 @@ function Header(props) {
   );
 }
 
-export default React.memo(Header);
+export default Header;

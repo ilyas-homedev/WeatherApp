@@ -32,6 +32,35 @@
   font-weight: 400;
 }
 
+.tempBtns {
+  position: absolute;
+  right: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tempBtns button {
+  font-size: 24px;
+  padding: 5px 10px 5px 5px;
+  background-color: rgba(204, 204, 204, .5);
+}
+
+.tempBtns button:hover,
+.tempBtns button.active {
+  opacity: 1;
+  background-color: #fff;
+  color: #000;
+}
+
+.tempBtns button:nth-child(1) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.tempBtns button:nth-child(2) {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .leftside {
   margin-left: 10px;
   font-size: 32px;
@@ -69,6 +98,12 @@
   order: 2;
 }
 
+@media (max-width: 830px) {
+  .rightside .temperature p {
+    font-size: 48px;
+  }
+}
+
 @media (max-width: 768px) {
   .rightside .temperature p {
     font-size: 40px;
@@ -96,6 +131,10 @@
 }
 
 @media (max-width: 450px) {
+  .leftside h2 {
+    margin-top: 2.5rem;
+  }
+
   .rightside .temperature {
     flex-direction: column;
   }
